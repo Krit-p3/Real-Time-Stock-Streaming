@@ -1,4 +1,4 @@
-# StockStream-Insight-Real-Time-Price-Tracking-Sentiment-Analysis
+# Real time stock streaming
 
 ## Description
 

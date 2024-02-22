@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "StockStream Insight"
+name = "Real time stock streaming"
 version = "0.1.0"
 description ="A cutting-edge data pipeline designed with medallion architecture to demonstrate real-time stock price analysis."
 authors = ["Krit Pragobdee <krit.pragobdee@outlook.com>"]

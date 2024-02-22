@@ -1,7 +1,7 @@
 # This is a Databricks asset bundle definition for realtime_stock.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
 bundle:
-  name: StockStream Insight
+  name: Real-time-stock-streaming
 
 include:
   - resources/*.yml

@@ -1,7 +1,7 @@
 resources:
   jobs:
-    realtime_stock_job:
-      name: realtime_stock_job
+    stock_news_pipeline:
+      name: stock_news_pipeline
       schedule:
         quartz_cron_expression: 0 15 10 ? * MON-FRI
         timezone_id: America/Los_Angeles
