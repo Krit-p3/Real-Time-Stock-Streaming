@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "streaming-quote"
+version = "0.1.0"
+description = "\"This python script run for retrieve real time stock quote in Nasdaq Market\""
+authors = ["Krit Pragobee <krit.pragobdee@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10.5"
+asyncio = "^3.4.3"
+azure-eventhub = "^5.11.6"
+finnhub-python = "^2.4.19"
+python-dotenv = "^1.0.1"
+pytz = "^2024.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

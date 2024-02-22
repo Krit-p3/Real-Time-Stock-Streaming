@@ -1,0 +1,12 @@
+# The main pipeline for realtime_stock
+resources:
+  pipelines:
+    realtime_stock_pipeline:
+      name: realtime_stock_pipeline
+      target: realtime_stock_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src

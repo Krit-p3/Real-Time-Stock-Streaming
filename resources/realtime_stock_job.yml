@@ -1,0 +1,32 @@
+resources:
+  jobs:
+    realtime_stock_job:
+      name: realtime_stock_job
+      schedule:
+        quartz_cron_expression: 0 15 10 ? * MON-FRI
+        timezone_id: America/Los_Angeles
+      email_notifications:
+        on_failure:
+          - jonhdoe@example.com
+      tasks:
+        - task_key: notebook_task
+          job_cluster_key: job_cluster
+          notebook_task:
+            notebook_path: ../src/elt_pipeline.ipynb
+          libraries:
+              - pypi:
+                  package: finnhub-python==2.4.19
+              - pypi:
+                  package: transformers==4.37.2
+              - pypi:
+                  package: torch==2.2.0
+        
+      job_clusters:
+        - job_cluster_key: job_cluster
+          new_cluster:
+            spark_version: 13.3.x-scala2.12
+            node_type_id: Standard_D3_v2
+            autoscale:
+              min_workers: 1
+              max_workers: 4
+            
